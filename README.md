@@ -1,29 +1,26 @@
-# Classplus Token Generator API
+# ClassPlus OTP Token Generator API
 
-This Express.js backend generates a login token for Classplus using mobile number and org code.
+## 🔧 Endpoints
 
-## 🛠 Setup
-
-```bash
-npm install
-node server.js
-```
-
-### 🔗 POST /token
-
+### POST `/send-otp`
 ```json
 {
-  "mobile": "9876543210",
-  "orgCode": "ABCD"
+  "orgCode": "ORG123",
+  "phoneNumber": "9999999999"
 }
 ```
 
-Returns:
-
+### POST `/verify-otp`
 ```json
 {
-  "token": "your_jwt_token_here"
+  "orgCode": "ORG123",
+  "phoneNumber": "9999999999",
+  "otp": "123456"
 }
 ```
 
-✅ Host on Render, Vercel or Railway
+---
+
+## 🟢 One-Click Deploy
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://dashboard.render.com/deploy?repo=https://github.com/yourusername/classplus-api)
