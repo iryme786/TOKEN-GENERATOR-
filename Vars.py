@@ -3,4 +3,4 @@
 import os
 from os import environ
 
-API_ID = int(environ.get("API_ID", "29320367"))
+BOT_TOKEN = environ.get("BOT_TOKEN", ""))
